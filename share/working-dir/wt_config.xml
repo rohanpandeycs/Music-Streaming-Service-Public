@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<server><application-settings location="*"><log-file/><log-config>* -debug -info:WebRequest</log-config><behind-reverse-proxy>false</behind-reverse-proxy><head-matter><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/><meta name="theme-color" content="#303030"/></head-matter></application-settings></server>

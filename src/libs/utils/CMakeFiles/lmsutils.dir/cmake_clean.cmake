@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/lmsutils.dir/impl/ArchiveZipper.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/ArchiveZipper.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/ChildProcess.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/ChildProcess.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/ChildProcessManager.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/ChildProcessManager.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/Config.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/Config.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/FileResourceHandler.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/FileResourceHandler.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/IOContextRunner.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/IOContextRunner.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/Logger.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/Logger.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/NetAddress.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/NetAddress.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/Path.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/Path.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/Random.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/Random.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/RecursiveSharedMutex.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/RecursiveSharedMutex.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/StreamLogger.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/StreamLogger.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/String.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/String.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/UUID.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/UUID.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/WtLogger.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/WtLogger.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/http/Client.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/http/Client.cpp.o.d"
+  "CMakeFiles/lmsutils.dir/impl/http/SendQueue.cpp.o"
+  "CMakeFiles/lmsutils.dir/impl/http/SendQueue.cpp.o.d"
+  "liblmsutils.dylib"
+  "liblmsutils.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/lmsutils.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

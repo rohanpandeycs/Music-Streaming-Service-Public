@@ -1,0 +1,5 @@
+if(EXISTS "/Users/shree/Downloads/lms-master/src/libs/som/test/test-som[1]_tests.cmake")
+  include("/Users/shree/Downloads/lms-master/src/libs/som/test/test-som[1]_tests.cmake")
+else()
+  add_test(test-som_NOT_BUILT test-som_NOT_BUILT)
+endif()

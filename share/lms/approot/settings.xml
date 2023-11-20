@@ -1,0 +1,165 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages xmlns:if="Wt.WTemplate.conditions">
+<!--FORMS message blocks-->
+
+<message id="Lms.Settings.template">
+	<form class="row g-3">
+		<legend>${tr:Lms.Settings.audio}</legend>
+		<div class="alert alert-info">
+			${tr:Lms.Settings.audio-settings-are-local}
+		</div>
+		<div class="col-lg-4">
+			<label class="form-label" for="${id:transcode-mode}">
+				${tr:Lms.Settings.transcode-mode}
+			</label>
+			${transcode-mode class="form-control"}
+			<div class="invalid-feedback">
+				${transcode-mode-info}
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<label class="form-label" for="${id:transcode-format}">
+				${tr:Lms.Settings.transcode-format}
+			</label>
+			${transcode-format class="form-control"}
+			<div class="invalid-feedback">
+				${transcode-format-info}
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<label class="form-label"  for="${id:transcode-bitrate}">
+				${tr:Lms.Settings.transcode-bitrate}
+;			</label>
+			<div class="input-group mb-3">
+				${transcode-bitrate class="form-control"}
+				<span class="input-group-text">kbps</span>
+			</div>
+			<div class="invalid-feedback">
+				${transcode-bitrate-info}
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<label class="form-label"  for="${id:replaygain-mode}">
+				${tr:Lms.Settings.replaygain-mode}
+			</label>
+			${replaygain-mode class="form-control"}
+			<div class="invalid-feedback">
+				${replaygain-mode-info}
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<label class="form-label"  for="${id:replaygain-preamp}">
+				${tr:Lms.Settings.replaygain-preamp}
+			</label>
+			<div class="input-group mb-3">
+				${replaygain-preamp class="form-control"}
+				<span class="input-group-text">dB</span>
+				<div class="invalid-feedback">
+					${replaygain-preamp-info}
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<label class="form-label" for="${id:replaygain-preamp-no-rg-info}">
+				${tr:Lms.Settings.replaygain-preamp-no-rg-info}
+			</label>
+			<div class="input-group mb-3">
+				${replaygain-preamp-no-rg-info class="form-control"}
+				<span class="input-group-text">dB</span>
+				<div class="invalid-feedback">
+					${replaygain-preamp-no-rg-info-info}
+				</div>
+			</div>
+		</div>
+		${<if-has-subsonic-api>}
+			<legend>${tr:Lms.Settings.subsonic-api}</legend>
+			<div class="col-lg-6">
+				<label class="form-label" for="${id:subsonic-transcode-format}">
+					${tr:Lms.Settings.default-transcode-format}
+				</label>
+				${subsonic-transcode-format class="form-control"}
+				<div class="invalid-feedback">
+					${subsonic-transcode-format-info class="help-block"}
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<label class="form-label" for="${id:subsonic-transcode-bitrate}">
+					${tr:Lms.Settings.default-transcode-bitrate}
+				</label>
+				<div class="input-group mb-3">
+					${subsonic-transcode-bitrate class="form-control"}
+					<span class="input-group-text">kbps</span>
+				</div>
+				<div class="invalid-feedback">
+					${subsonic-transcode-bitrate-info class="help-block"}
+				</div>
+			</div>
+			<div class="col-12">
+				<label class="form-label" for="${id:subsonic-artist-list-mode}">
+					${tr:Lms.Settings.subsonic-artist-list-mode}
+				</label>
+				${subsonic-artist-list-mode class="form-control"}
+				<div class="invalid-feedback">
+					${subsonic-artist-list-mode-info class="help-block"}
+				</div>
+			</div>
+			${</if-has-subsonic-api>}
+		<legend>${tr:Lms.Settings.scrobbling}</legend>
+		<div class="col-lg-6">
+			<label class="form-label" for="${id:scrobbler}">
+				${tr:Lms.Settings.scrobbling.scrobbler}
+			</label>
+			${scrobbler class="form-control"}
+			<div class="invalid-feedback">
+				${scrobbler-info class="help-block"}
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<label class="form-label" for="${id:listenbrainz-token}">
+				${tr:Lms.Settings.scrobbling.listenbrainz-token}
+			</label>
+			${listenbrainz-token class="form-control"}
+			<div class="invalid-feedback">
+				${listenbrainz-token-info class="help-block"}
+			</div>
+		</div>
+		${<if-has-change-password>}
+		<legend>${tr:Lms.Settings.change-password}</legend>
+		${<if-has-old-password>}
+		<div class="col-12">
+			<label class="form-label" for="${id:password-old}">
+				${tr:Lms.password-old}
+			</label>
+			${password-old class="form-control"}
+			<div class="invalid-feedback">
+				${password-old-info class="help-block"}
+			</div>
+		</div>
+		${</if-has-old-password>}
+		<div class="col-lg-6">
+			<label class="form-label" for="${id:password}">
+				${tr:Lms.password-new}
+			</label>
+			${password class="form-control"}
+			<div class="invalid-feedback">
+				${password-info class="help-block"}
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<label class="form-label" for="${id:password-confirm}">
+				${tr:Lms.password-confirm}
+			</label>
+			${password-confirm class="form-control"}
+			<div class="invalid-feedback">
+				${password-confirm-info class="help-block"}
+			</div>
+		</div>
+		${</if-has-change-password>}
+		<div class="col-12">
+			${apply-btn class="btn btn-primary me-1"}${discard-btn class="btn btn-secondary"}
+		</div>
+	</form>
+</message>
+
+</messages>

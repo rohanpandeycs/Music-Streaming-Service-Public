@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+<meta content="ie=edge,chrome=1" http-equiv="x-ua-compatible"/>
+<meta content="Emweb provides complete solutions for web-based user interfaces using our popular open source library Wt." name="description"/>
+<meta content="web-based user interfaces, web applications, intranets, embedded systems" name="keywords"/>
+<meta content="Emweb" name="author"/>
+<meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport"/>
+<meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<link href="/images/favicon/wt/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/favicon/wt/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon/wt/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/favicon/wt/manifest.json" rel="manifest"/>
+<link color="#a4417e" href="../images/favicon/wt/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/images/favicon/wt/favicon.ico" rel="shortcut icon"/>
+<meta content="/images/favicon/wt/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<style type="text/css">.wow { visibility: hidden; }</style>
+<noscript>
+	<style type="text/css">.wow { visibility: visible; }</style>
+</noscript>
+
+<meta name="robots" content="noindex, nofollow">
+<title>Wt, C++ Web Toolkit  —  Emweb</title>
+<!--[if gte IE 6]>
+<style type="text/css">
+v\:* { behavior: url(#default#VML);position:absolute }
+</style>
+<xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
+<script id="ie-deferred-loader" defer="defer" src="//:"></script>
+<![endif]-->
+<style type="text/css" id="Wt-inline-css">
+/*<![CDATA[*/
+table { border-collapse: collapse; border: 0px;border-spacing: 0px }
+div, td, img { margin: 0px; padding: 0px; border: 0px }
+td { vertical-align: top; }
+td { text-align: left; }
+.Wt-rtl td { text-align: right; }
+button { white-space: nowrap; }
+video { display: block }
+iframe.Wt-resource { width: 0px; height: 0px; border: 0px; }
+.Wt-wrap { border: 0px;margin: 0px;padding: 0px;font: inherit; cursor: pointer;background: transparent;text-decoration: none;color: inherit; }
+.Wt-wrap { text-align: left; }
+.Wt-rtl .Wt-wrap { text-align: right; }
+div.Wt-chwrap { width: 100%; height: 100% }
+.unselectable { -moz-user-select:-moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none; }
+.selectable { -moz-user-select: text;-khtml-user-select: normal;-webkit-user-select: text;user-select: text; }
+.Wt-domRoot { position: relative; }
+body.Wt-layout { height: 100%; width: 100%;margin: 0px; padding: 0px; border: none; }
+html.Wt-layout { height: 100%; width: 100%;margin: 0px; padding: 0px; border: none; }
+img.Wt-indeterminate { margin: 3px 3px 0px 4px; }
+div.Wt-loading { background-color: red; color: white;font-family: Arial,Helvetica,sans-serif;font-size: small;position: absolute; right: 0px; top: 0px; }
+body div > div.Wt-loading { position: fixed; }
+
+/* ]]> */
+</style>
+<link href="../resources/themes/bootstrap/3/3/wt.css" rel="stylesheet" type="text/css">
+<link href="../resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Righteous|Roboto:300,400,400i,500,700" rel="stylesheet" type="text/css">
+<link href="/stylesheets/slider.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/style-wt.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/blog.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/asciidoc.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/sourceview.css" rel="stylesheet" type="text/css">
+<script src=/javascripts/vendor/jquery-1.11.2.min.js></script>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+window.onresize=function(){};function loadScript(e){const t=document.getElementsByTagName("head")[0],n=navigator.userAgent.toLowerCase(),o=/firefox\/(\d+)\./.exec(n);if(o&&o[1]>=20){const n=new XMLHttpRequest;n.open("GET",e,!0);n.onreadystatechange=function(){if(4===n.readyState){const e=document.createElement("script");e.type="text/javascript";e.innerHTML=n.responseText;t.appendChild(e)}};n.send(null)}else{const n=document.createElement("script");n.setAttribute("src",e);t.appendChild(n)}};window.delayedClicks=[];function delayClick(e){if(null===document.getElementById("Wt-form"))return!0;const t={bubbles:e.bubbles,cancelable:e.cancelable,detail:e.detail,screenX:e.screenX,screenY:e.screenY,clientX:e.clientX,clientY:e.clientY,ctrlKey:e.ctrlKey,altKey:e.altKey,shiftKey:e.shiftKey,metaKey:e.metaKey,button:e.button,targetId:(e.target||e.srcElement).id};window.delayedClicks.push(t);e.stopPropagation&&e.stopPropagation();e.preventDefault&&e.preventDefault();e.cancelBubble=!0;e.returnValue=!1;return!1}function setupDelayClick(){const e=document.body;e?e.addEventListener?e.addEventListener("click",delayClick,!0):e.attachEvent("onclick",delayClick):setTimeout(setupDelayClick,1)};setTimeout((function(){const e=document,t=window;try{e.execCommand("BackgroundImageCache",!1,!0)}catch(e){}function n(e){t.location.replace?t.location.replace(e):t.location.href=e}function o(){let e=window.location.search;e.length>1&&"?"===e.charAt(0)&&(e=e.substring(1));return e.split("&")}t.opera&&t.opera.setOverrideHistoryNavigationMode("compatible");const i='/download';let c=t.location.pathname;t.opera||(c=decodeURIComponent(c));if(i.length>0){const e=c.lastIndexOf(i);-1!==e&&(c=c.substring(0,e)+c.substring(e+i.length))}const a="&deployPath="+encodeURIComponent(c),l=t.XMLHttpRequest||t.ActiveXObject;let s=true;const _=new Date;_.setTime(_.getTime()+1e3);;const r="jscookietest=valid;SameSite=Lax";e.cookie=r;s=s||false&&-1!==e.cookie.indexOf(r);e.cookie=r+";expires=Thu, 01 Jan 1970 00:00:00 GMT;SameSite=Lax";e.cookie="WtTestCookie=ok;path=/;expires="+_.toGMTString()+";SameSite=Lax";;let d=t.location.hash;d.length>0&&(d=d.substring(1));const u=d.indexOf("?");-1!==u&&(d=d.substring(0,u));const $=navigator.userAgent.toLowerCase();-1!==$.indexOf("gecko")&&-1===$.indexOf("webkit")||(d=unescape(d));let f="";screen.deviceXDPI!==screen.logicalXDPI&&(f="&scale="+screen.deviceXDPI/screen.logicalXDPI);;if(window.WebGLRenderingContext){const e=document.createElement("canvas");let t=null;try{t=e.getContext("webgl",{antialias:!0})}catch(e){}if(null===t)try{t=e.getContext("experimental-webgl")}catch(e){}null!==t&&(f+="&webGL=true")};f+="&scrW="+screen.width+"&scrH="+screen.height;let p='../wt?wtd=mmvZgzIdNn9ZzBLn'+"&sid="+1234047179;const m=!(!window.history||!window.history.pushState),h=m?"&htmlHistory=true":"";f+="&tz="+-(new Date).getTimezoneOffset();"object"==typeof Intl&&"function"==typeof Intl.DateTimeFormat&&"function"==typeof Intl.DateTimeFormat().resolvedOptions&&Intl.DateTimeFormat().resolvedOptions().timeZone&&(f+="&tzS="+encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone));let g=!s||!l;g&&"mmvZgzIdNn9ZzBLn"===function(e){const t=o();for(let n=0,o=t.length;n<o;n++){const o=t[n].split("=");if(o.length>=2&&o[0]===e)return unescape(o[1])}return null}("wtd")&&(g=!1);if(g)if(m)n(function(e,t){let n=!1;const i=o();for(let o=0,c=i.length;o<c;o++){const c=i[o].split("=");if(c.length>=2&&c[0]===e){c[1]=escape(t);i[o]=c.join("=");n=!0;break}}n||i.push(e+"="+escape(t));return"?"+i.join("&")+window.location.hash}("wtd","mmvZgzIdNn9ZzBLn"));else{let e;e=d.length>1&&"/"===d.charAt(0)?d:'/download';e.length>0&&(p+="#"+e);n(p)}else if(l){let t='../wt#/download',o="";if(!m&&t.length>1){;const o="WtInternalPath="+escape('/download')+";path=/;expires="+_.toGMTString()+";SameSite=Lax";e.cookie=o;;"#"===t.charAt(0)&&(t="../"+t);n(t)}else{if(d.length>1&&"/"===d.charAt(0)){o="&_="+encodeURIComponent(d);;d!=='/download'&&setTimeout((function t(){const n=e.getElementById("Wt-form");null!==n?n.style.visibility="hidden":setTimeout(t,10)}),10);};setupDelayClick();;loadScript(p+(o+f+h+a)+"&request=script&rand="+(Math.round(1e6*Math.random())+4178613789))}}}),0);
+/* ]]> */
+</script>
+</head>
+<body  class="Wt-ltr">
+<!--[if lt IE 8]>
+<iframe id="Wt-history-iframe" src="../wt?wtd=mmvZgzIdNn9ZzBLn&amp;request=resource&amp;resource=blank"
+ style="position:absolute;top:0;left:0;width:1px;height:1px;visibility:hidden;">
+</iframe>
+<![endif]-->
+<iframe id='wt_iframe_dl_id' name='wt_iframe_dl' style='display:none;'></iframe>
+<div>
+  <input id="Wt-history-field" type="hidden"/>
+</div>
+
+<form method='post' action='../wt/download?wtd=mmvZgzIdNn9ZzBLn' id='Wt-form'
+      enctype='multipart/form-data' style='width:100%;height:100%;margin:0px;'>
+  <div>
+    <input name='request' id='request' type='hidden' value='page' />
+    <input name='wtd' id='wtd' type='hidden' value='mmvZgzIdNn9ZzBLn' />
+  </div>
+
+  <div id="ow4gepm" class="Wt-domRoot" style="height:100.0%;"><div id="Wt-timers" style="position:absolute;height:0.0px;"></div><div id="ow4gepo" style="height:100.0%;"><div id="ow4geqj">
+    
+      
+    <nav class="navbar" id="nav" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand Wt-ip" href="../wt?wtd=mmvZgzIdNn9ZzBLn">Wt</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar"><ul id="ow4geqn" class="nav navbar-nav navbar-right"><li id="ow4geqp"><a id="ow4geqr" href="../wt/features?wtd=mmvZgzIdNn9ZzBLn" class="Wt-rr"><span id="ow4geqs"><span id="ow4geqt" style="white-space:nowrap;">Features</span></span></a></li><li id="ow4geqw"><a id="ow4geqy" href="../wt/documentation?wtd=mmvZgzIdNn9ZzBLn" class="Wt-rr"><span id="ow4geqz"><span id="ow4ger0" style="white-space:nowrap;">Documentation</span></span></a></li><li id="ow4get0"><a id="ow4get2" href="../wt/support?wtd=mmvZgzIdNn9ZzBLn" class="Wt-rr"><span id="ow4get3"><span id="ow4get4" style="white-space:nowrap;">Support</span></span></a></li><li id="ow4gev8"><a id="ow4geva" href="../wt/news?wtd=mmvZgzIdNn9ZzBLn" class="Wt-rr"><span id="ow4gevb"><span id="ow4gevc" style="white-space:nowrap;">News</span></span></a></li><li id="ow4gevf"><a id="ow4gevh" href="../wt/careers?wtd=mmvZgzIdNn9ZzBLn" class="Wt-rr"><span id="ow4gevi"><span id="ow4gevj" style="white-space:nowrap;">Careers</span></span></a></li><li id="ow4gevm"><a id="ow4gevo" href="../wt/contact?wtd=mmvZgzIdNn9ZzBLn" class="Wt-rr"><span id="ow4gevp"><span id="ow4gevq" style="white-space:nowrap;">Contact</span></span></a></li><li id="ow4gevz" class="cta"><a id="ow4gew1" href="../wt/download?wtd=mmvZgzIdNn9ZzBLn" class="Wt-rr"><span id="ow4gew2"><span id="ow4gew3" style="white-space:nowrap;">Download</span></span></a></li></ul></div>
+      </div>
+    </nav>
+  
+    
+    <div id="ow4geqk" class="Wt-stack" style="overflow-x:hidden;overflow-y:hidden;"><div id="ow4geqq" style="height:100.0%;display:none;"></div><div id="ow4geqx" style="height:100.0%;display:none;"></div><div id="ow4get1" style="height:100.0%;display:none;"></div><div id="ow4gev9" style="height:100.0%;display:none;"></div><div id="ow4gevg" style="height:100.0%;display:none;"></div><div id="ow4gevn" style="height:100.0%;display:none;"></div><div id="ow4gew0" style="height:100.0%;"><div id="ow4gevy">
+    <div id="ow4gew4">
+    <header class="page-header gradient-bg-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 hidden-xs">
+            <h1>
+              Download
+            </h1>
+          </div>
+          <ol class="breadcrumbs col-md-5" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+            
+  
+    
+    
+      <li class='' itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem'>
+    
+        <a id="ow4geyn" href="../wt?wtd=mmvZgzIdNn9ZzBLn" itemprop="item" itemscope="" itemtype="http://schema.org/Thing" class="Wt-rr"><span id="ow4geyo" itemprop="name">Home</span></a>
+        <meta content='1' itemprop='position'/>
+      </li>
+  
+  
+  
+    
+      <li class=' current' itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem'>
+    
+    
+        <a id="ow4geyp" href="../wt/download?wtd=mmvZgzIdNn9ZzBLn" itemprop="item" itemscope="" itemtype="http://schema.org/Thing" class="Wt-rr"><span id="ow4geyq" itemprop="name">Download</span></a>
+        <meta content='2' itemprop='position'/>
+      </li>
+  
+  
+          </ol>
+        </div>
+      </div>
+    </header>
+  </div>
+    <section class="content-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h2 class="section-header gradient-header bordered-header">
+              <span>Download</span>
+            </h2>
+          </div>
+        </div>
+        <!--
+        <div class='row'>
+          <div class='col-md-6 col-md-offset-3 text-center padding-bottom-medium'>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</p>
+          </div>
+        </div>
+        -->
+        <div class="row">
+          <div class="col-md-12 padding-bottom-medium">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">License and Pricing</h3>
+              </div>
+              <div class="panel-body">
+    <p>Wt may be used using either an Open Source or a Commercial License.</p>
+    <p>
+      If you wish to use the library using the
+      <b>
+        GNU General Public
+        License (GPL)
+      </b>, you may build a web application with Wt
+      and deploy it, but per the terms of the GPL, you
+      are obliged to make the source code available to anyone
+      you give the application to install on their own server.
+      This also applies to redistribution of the Wt library, in
+      original or modified form.
+    </p>
+    <p>
+      <b>The Commercial License</b>
+      has no such limitations: you may
+      redistribute applications developed with Wt without needing to
+      redistribute the source code. The license is a royalty-free, perpetual
+      license for one developer to use the API of Wt
+      (respectively Wt::Dbo)
+      for application development, using the latest version of Wt or any
+      version released during one year.
+      
+        <a href="#wt-wtdbo-table">See the table below</a>
+        to see what's included in Wt and Wt::Dbo.
+      
+    </p>
+  </div>
+              <div class="panel-footer wide-padding text-center"><div id="ow4gew5"><div id="ow4gew6">
+    <button id="ow4gew7" name="signal=sb81248a" type="submit" class="btn btn-primary with-label">Request a quote</button>
+    <br/>
+    <br/>
+    or
+    <a href="mailto:sales@emweb.be">contact sales directly.</a>
+  </div><span id="ow4gew8" style="display:none;"></span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 padding-bottom-medium">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Available Packages</h3>
+              </div>
+              <div class="panel-body">
+                <table id="ow4gexm" class="download-tbl"><colgroup><col id="ow4gexp" /><col id="ow4gexs" /><col id="ow4gey3" /></colgroup><thead id="ow4gexmth"><tr id="ow4gexn"><th id="ow4gexo" scope="col"><span id="ow4gexq">Version</span></th><th id="ow4gexr" scope="col"><span id="ow4gext">Release date</span></th><th id="ow4gey1" scope="col"></th></tr></thead><tbody id="ow4gexmtb"><tr id="ow4gexu"><td id="ow4gexv"><span id="ow4gexx">Wt 4.10.2</span></td><td id="ow4gexw"><span id="ow4gexy">2023-11-08</span></td><td id="ow4gey2"><a id="ow4gexz" href="https://github.com/emweb/wt/archive/4.10.2.tar.gz"><span id="ow4gey0">
+    <i class="fa fa-download"></i>Source (.tar.gz)
+  </span></a></td></tr><tr id="ow4gey4"><td id="ow4gey5"><span id="ow4gey8">Wt 4.9.2</span></td><td id="ow4gey6"><span id="ow4gey9">2023-04-18</span></td><td id="ow4gey7"><a id="ow4geya" href="https://github.com/emweb/wt/archive/4.9.2.tar.gz"><span id="ow4geyb">
+    <i class="fa fa-download"></i>Source (.tar.gz)
+  </span></a></td></tr><tr id="ow4geyc"><td id="ow4geyd"><span id="ow4geyg">Wt 4.8.3</span></td><td id="ow4geye"><span id="ow4geyh">2022-12-22</span></td><td id="ow4geyf"><a id="ow4geyi" href="https://github.com/emweb/wt/archive/4.8.3.tar.gz"><span id="ow4geyj">
+    <i class="fa fa-download"></i>Source (.tar.gz)
+  </span></a></td></tr></tbody></table>
+                
+    
+      <p>
+        Binary builds are available
+        <a href="https://github.com/emweb/wt/releases">for Windows</a>.
+        Wt is available as a package in most Linux distributions, e.g. for Ubuntu:
+        <pre class="fragment">sudo apt-get install witty witty-dev witty-doc witty-dbg witty-examples</pre>
+      </p>
+      <p>
+        The last package (<tt>witty-examples</tt>) installs the examples
+        in
+        <tt>/usr/lib/Wt/examples</tt>.
+      </p>
+    
+    <p>Check the <a href="../wt/documentation?wtd=mmvZgzIdNn9ZzBLn" class="Wt-ip">documentation page</a> for information on how to get started with Wt.</p>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 padding-bottom-medium">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Git repository</h3>
+              </div>
+              <div class="panel-body">
+    <div class="row">
+      <div class="gh-logo pull-left hidden-xs">
+        
+          <a href="https://github.com/emweb/wt" class="fa fa-github fa-5x"></a>
+        
+        
+      </div>
+      <div>
+        <p>
+          
+            The Wt git repository can be found on <a href="https://github.com/emweb/wt">GitHub</a>. To clone:
+            <pre class="fragment">git clone https://github.com/emweb/wt.git</pre>
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+            </div>
+          </div>
+        </div>
+        
+          <div class="row">
+            <div class="col-md-12 padding-bottom-medium">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><a name="wt-wtdbo-table"></a>What's the difference between Wt and Wt::Dbo?</h3>
+                </div>
+                <div class="panel-body">
+    <table class="versions">
+      <thead>
+        <tr class="trh">
+          <th></th>
+          <th class="product text-center">Dbo</th>
+          <th class="product text-center">Wt + Dbo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="r0 feature">
+          <th>Widget library</th>
+          <td class="text-center"></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r1 subfeature">
+          <th>Application server</th>
+          <td class="text-center"></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r0 subfeature">
+          <th>HTTP + WebSockets server</th>
+          <td class="text-center"></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r1 subfeature">
+          <th>Charting Module</th>
+          <td class="text-center"></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r0 subfeature">
+          <th>XHTML Rendering Module</th>
+          <td class="text-center"></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r1 feature">
+          <th>C++ ORM</th>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r0 subfeature">
+          <th class="indent">Sqlite3 driver</th>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r1 subfeature">
+          <th class="indent">PostgreSQL driver</th>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r0 subfeature">
+          <th class="indent">Firebird driver</th>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r1 subfeature">
+          <th class="indent">MariaDB/MySQL driver</th>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r1 subfeature">
+          <th class="indent">SQL Server driver</th>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+          <td class="text-center"><i class="fa fa-check"></i></td>
+        </tr>
+        <tr class="r0 subfeature">
+          <th class="indent">Oracle driver</th>
+          <td class="text-center" colspan="2">
+            <a href="mailto:sales@emweb.be">Contact us</a>
+          </td>
+        </tr>
+        <tr class="r0 feature">
+          <th class="indent">
+            GNU General Public License
+          </th>
+          <td class="text-center">free</td>
+          <td class="text-center">free</td>
+        </tr>
+        <tr class="r1 feature">
+          <th class="indent multiline">
+            Commercial License
+          </th>
+          <td class="text-center">
+            <span class="price">€250</span>
+            <br/>
+            <a class="small" href="//www.webtoolkit.eu/wt/license/WtDbo%20License%20Agreement.pdf">(license text)</a>
+          </td>
+          <td class="text-center">
+            <span class="price">€850</span>
+            <br/>
+            <a class="small" href="//www.webtoolkit.eu/wt/license/Wt%20License%20Agreement.pdf">(license text)</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </section>
+  </div></div><span id="ow4geyk" style="display:none;"></span></div>
+    
+    
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-push-8">
+            <ul class="inline-links">
+              <li>
+                <a href="../wt/support?wtd=mmvZgzIdNn9ZzBLn" class="Wt-ip">Support</a>
+              </li>
+              <li>
+                <a href="../wt/careers?wtd=mmvZgzIdNn9ZzBLn" class="Wt-ip">Careers</a>
+              </li>
+              <li>
+                <a href="../wt/contact?wtd=mmvZgzIdNn9ZzBLn" class="Wt-ip">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+             <a href="/doc/emweb-privacy-policy.pdf">Privacy Policy</a>
+          </div>
+          <div class="col-md-4 col-md-pull-8">
+            © Copyright 2017–2023
+            <a href="https://www.emweb.be">Emweb</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    
+    
+    <span class="hidden top-link-block">
+      <a class="well well-sm" href="#top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </span>
+  
+    
+    <script type="text/javascript">
+        /*<![CDATA[*/
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-4345578-1', 'auto');
+ga('send', 'pageview');
+        /* ]]> */
+    </script>
+  
+  </div></div><span id="ow4geqg" style="display:none;"></span></div>
+
+</form>
+
+</body>
+</html>

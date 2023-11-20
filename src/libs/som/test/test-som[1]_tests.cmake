@@ -1,0 +1,7 @@
+add_test([=[som.Matrix]=]  /Users/shree/Downloads/lms-master/src/libs/som/test/test-som [==[--gtest_filter=som.Matrix]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[som.Matrix]=]  PROPERTIES WORKING_DIRECTORY /Users/shree/Downloads/lms-master/src/libs/som/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[som.InputVector]=]  /Users/shree/Downloads/lms-master/src/libs/som/test/test-som [==[--gtest_filter=som.InputVector]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[som.InputVector]=]  PROPERTIES WORKING_DIRECTORY /Users/shree/Downloads/lms-master/src/libs/som/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[som.Network]=]  /Users/shree/Downloads/lms-master/src/libs/som/test/test-som [==[--gtest_filter=som.Network]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[som.Network]=]  PROPERTIES WORKING_DIRECTORY /Users/shree/Downloads/lms-master/src/libs/som/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  test-som_TESTS som.Matrix som.InputVector som.Network)

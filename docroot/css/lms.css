@@ -1,0 +1,172 @@
+/* Generic rules */
+
+:root {
+  --lms-striped-bg: #022f3a;
+}
+
+.link-success {
+  transition: color 0.15s ease;
+}
+
+.link-secondary {
+  transition: color 0.15s ease;
+}
+
+.Lms-bg-dark-hover {
+  transition: background-color 0.15s ease;
+}
+
+.Lms-bg-dark-hover:hover {
+  background-color: var(--bs-dark);
+}
+
+.Lms-row-container {
+  /* --lms-striped-bg: #000000; */
+  --lms-striped-bg: #022f3a;
+  --lms-hover-bg: var(--bs-dark);
+}
+
+.Lms-row-container > :nth-child(odd) {
+  background-color: var(--lms-striped-bg);
+}
+
+.Lms-row-container > *:hover {
+  background-color: var(--lms-hover-bg);
+}
+
+/* Specific rules */
+body {
+  padding-bottom: 78px;
+}
+
+.Lms-badge-cluster {
+  transition: filter 0.15s ease;
+  cursor: pointer;
+}
+
+.Lms-badge-cluster:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}
+
+.Lms-entry-playing {
+  background-color: #0d4655 !important;
+}
+
+.Lms-cover {
+  opacity: 0;
+  transition: opacity 0.5s ease-in, filter 0.15s ease;
+}
+
+.Lms-cover-anchor:hover {
+  filter: brightness(85%);
+}
+
+.Lms-cover-container {
+  position: relative;
+}
+
+.Lms-cover-loaded {
+  opacity: 1;
+}
+
+.Lms-cover-release {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.Lms-cover-track {
+  width: 64px;
+  min-width: 64px;
+}
+
+#lms-mp-progress {
+  transition: none;
+}
+
+#lms-mp-volume {
+  cursor: pointer;
+}
+
+#lms-mp-volume-slider::-webkit-slider-runnable-track {
+  background-color: var(--bs-gray-900);
+}
+
+#lms-mp-volume-slider::-moz-range-track {
+  background-color: var(--bs-gray-900);
+}
+
+.Lms-notification-container {
+  position: fixed;
+  bottom: 78px;
+  right: 0;
+}
+
+.Lms-player {
+  height: 70px;
+}
+
+.fixed-bottom.Lms-player {
+  z-index: 999;
+}
+
+.Lms-player-volume-container {
+  width: 100px;
+}
+
+.Lms-player-seek-common {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 6px;
+}
+
+.Lms-player-seek {
+  cursor: pointer;
+  z-index: 1;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+}
+
+.Lms-player-seek::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 0;
+  width: 0;
+}
+
+.Lms-player-seek::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 0;
+  width: 0;
+}
+
+.Lms-responsive-square {
+  width: 100%;
+}
+
+.Lms-responsive-square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.Lms-tracks-entry-position {
+  min-width: 2.1rem;
+}
+
+.Lms-tracks-entry-duration {
+  min-width: 4rem;
+}

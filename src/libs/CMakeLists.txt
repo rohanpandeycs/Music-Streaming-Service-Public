@@ -1,0 +1,7 @@
+add_subdirectory(av)
+add_subdirectory(image)
+add_subdirectory(metadata)
+add_subdirectory(services)
+add_subdirectory(som)
+add_subdirectory(subsonic)
+add_subdirectory(utils)
